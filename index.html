@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akin Holo - Mock-ups Page</title>
+
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 20px 0;
+        background-color: #f5f5f5;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      nav a {
+        color: #800080;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 1rem;
+      }
+      
+      main div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      div a {
+        display: block;
+        width: 300px;
+        height: 400px;
+        margin: 1em;
+        text-decoration: none;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 10px;
+      }
+      div a h2 {
+        color: #fff;
+        width: 100%;
+        background-color: #000;
+        margin: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      div a h3 {
+        color: #0000ff;
+        margin: 1em 0;
+      }
+      div a img {
+        box-shadow: 2px 2px 5px 2px #f5f5f5;
+      }
+      div a p {
+        color: #000;
+        margin: 1em;
+        border-top: 1px solid #00000034;
+      }
+
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="/mock-ups/1-qrcode.html">Mock-up 1</a>
+        <a>Mock-up 2</a>
+        <a>Mock-up 3</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Welcome to the 3-columns Mock-ups Landing Page. Kindly check it out</h1>
+     
+      <div class="">
+        <a class="qr-code" href="/mock-ups/1-qrcode.html">
+          <h2>Mock-up 1</h2>
+          <h3>QR Code Component</h3>
+          <img src="/assets/qrCode.png" alt="">
+          <p>visiting a webpage using Quick Response Code</p>
+        </a>
+        <a>
+          <h2>Mock-up 2</h2>
+          <h3>Bento Grid</h3>
+        </a>
+        <a>
+          <h2>Mock-up 3</h2>
+          <h3></h3>
+        </a>
+      </div>
+    </main>
+</body>
+</html>

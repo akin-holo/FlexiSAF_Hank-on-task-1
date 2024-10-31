@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akin Holo Solution | QR Code Component</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <Style>
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(95, 158, 160, 0.21);
+        font-family: "Outfit", sans-serif;
+        font-weight: 400, 700;
+      }
+
+
+      header {
+        width: 100%;
+        padding: 10px 0;
+        background-color: #fff;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px; 
+      }
+/* 
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+
+        @media screen and (max-width: 359px){
+          font-size: 20px; 
+        }
+      } */
+      .container {
+        display: block;
+        color: #000;
+        width: 330px;
+        height: 470px;
+        margin: 1.5rem auto;
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .blue-bg {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 153, 255);
+        width: 280px;
+        height: 250px;
+        margin: 1.5em;
+        border-radius: inherit;
+      }
+      .inner-circle {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        background-color: #ffffff1f;
+        border-radius: 50%;
+      }
+      .top-inner-circle {
+        top: -20%;
+        left: -15%;
+      }
+      .bottom-inner-circle {
+        bottom: -45%;
+        right: -25%;
+      }  
+
+
+      .text-wrapper {
+        margin: 2.4em 2.4em 0;
+      }
+      span {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 15px;
+      }
+    </Style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#" aria-current="page">Mock-up 1</a>
+      <a>Mock-up 2</a>
+      <a>Mock-up 3</a>
+    </nav>
+  </header>
+  <main>
+    <!-- <h1>Solution to the QR Code Challenge</h1> -->
+    <a href="" class="container" aria-label="Improve your front-end skills by building projects. Scan the QR code to visit Frontend Mentor and take your coding skills to the next level">
+        <div class="blue-bg" aria-hidden="true">
+            <div class="inner-circle top-inner-circle"></div>
+            <div class="inner-circle bottom-inner-circle"></div>
+
+            <div class="qr-code" id="qr-code"></div>
+        </div>
+        <div class="text-wrapper">
+            <span>Improve your front-end skills by building projects</span>
+            <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+        </div>   
+    </a>
+  </main>
+
+  <script>
+    var qrcode = new QRCode(document.getElementById("qr-code"), {
+      text: "https://www.frontendmentor.io",
+      width: 180,
+      height: 190,
+      colorDark: "white",
+      colorLight: "transparent",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
