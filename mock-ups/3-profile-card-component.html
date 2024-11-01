@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akin Holo Solution - Profile Card Component</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      display: flex;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color:aquamarine;
+      background-color:cadetblue;
+      background-color:darkcyan;
+    }
+    main .circle {
+      position: absolute;
+    }
+    .card-component {
+        position: relative; 
+        width: 365px;
+        height: 390px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .color-color {
+        height: 35%;
+        background-image: url("../assets/Screenshot\ 2024-11-01\ 023548.png");
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    .pix-and-name-wrapper {
+        position: absolute;
+        top: -10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .picture-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .name {
+      margin-top: 0.5em;
+        font-size: 22px;
+    }
+    .name span {
+      color: #0000005b;
+      font-size: 20px;
+    }
+    .pix {
+      border-radius: inherit;
+    }
+
+    .impressions {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      height: 20%;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 1.5em;
+      border-top: 1px solid #00000042;
+      gap: 20px;
+    }
+    .impressions span,
+    .impressions small 
+     {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .impressions span {
+      font-weight: 600;
+    }
+    .impressions small {
+      color: #0000005b;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+    <main>
+      <div class="circle top-circle"></div>
+      <div class="circle bottom-circle"></div>
+
+      <div class="card-component">
+        <div class="color-color"></div>
+        <div class="pix-and-name-wrapper">
+          <div class="picture-back">
+            <img src="/assets/portrait-3353699_640.jpg" alt="profile picture" class="pix">
+          </div>
+
+          <p class="name">
+            Victor Crest
+            <span>26</span>
+          </p>  
+          <p class="country">London</p>
+
+        </div>
+
+        <div class="impressions">
+          <div class="followers-wrapper">
+            <span>80k</span>
+            <small>Followers</small>
+          </div>
+
+          <div class="likes-wrapper">
+            <span>803k</span>
+            <small>Followers</small>
+          </div>
+
+          <div class="photo-wrapper">
+            <span>80k</span>
+            <small>Followers</small>
+          </div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
