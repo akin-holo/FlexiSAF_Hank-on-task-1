@@ -5,6 +5,7 @@ function calculatePayment() {
   const interestRate = 25.5 / 100; // Fixed interest rate of 25.5%
   const isRepayment = document.getElementById("repayment").checked;
 
+
   // Validate inputs
   if (isNaN(amount) || isNaN(years) || amount <= 0 || years <= 0) {
     document.getElementById("result").textContent = "Please enter valid values for amount and term.";
@@ -16,6 +17,8 @@ function calculatePayment() {
               
 
   if (isRepayment) {
+
+      // remove the image
     document.querySelector("img").style.display = "none";
 
     // Repayment mortgage calculation
@@ -25,20 +28,45 @@ function calculatePayment() {
 
     resultText = `Your results`;
     document.querySelector(".info").textContent = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayment" again.';
-    
+
+    // Display the payment amount
+    document.querySelector(".payment-wrapper").style.display = "block";
+    document.querySelector(".monthly-message").textContent = "Your monthly repayments";
+    document.querySelector(".monthly-amount").textContent = `£${monthlyPayment.toFixed(2)}`;
+
+    document.querySelector(".total-message").textContent = "Total you'll repay over the term";
+    document.querySelector(".total-amount").textContent = `£${(monthlyPayment * (years * 12))}`;
+
+   
 
   } else {
     document.querySelector("img").style.display = "none";
 
     // Interest-only mortgage calculation
-    `${resultText}`;
-    `${info}`;
+    const monthlyInterest = (amount * interestRate) / 12;
+
+    resultText = `Your results`;
+    document.querySelector(".info").textContent = 'Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayment" again.';
+    
+    // Display the payment amount
+    document.querySelector(".payment-wrapper").style.display = "block";
+    document.querySelector(".monthly-message").textContent = "Your monthly repayments";
+    document.querySelector(".monthly-amount").textContent = `£${monthlyInterest.toFixed(2)}`;
+
+    document.querySelector(".total-message").textContent = "Total you'll repay over the term";
+    document.querySelector(".total-amount").textContent = `£${(monthlyPayment * (years * 12))}`;
+
+
+    
+    // resultText = `Your monthly interest payment is £${monthlyInterest.toFixed(2)}`;
     // const monthlyInterest = (amount * interestRate) / 12;
   }
+
 
   // Display the result
   document.getElementById("result").textContent = resultText;
 }
+
 
 function clearAllFields() {
   document.getElementById("amount").value = '';
@@ -47,6 +75,8 @@ function clearAllFields() {
   document.getElementById("repayment").checked = false;
   document.getElementById("interest").checked = false;
   document.getElementById("result").textContent = "Results shown here";
+  document.getElementById("paymentWrapper").style.display = "none";
+
 
   // Show the image again when clearing
   document.querySelector(".result-field img").style.display = "block";

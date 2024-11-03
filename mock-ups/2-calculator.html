@@ -16,10 +16,6 @@
           justify-content: center;
           padding: 20px 0;
           background-color: #add8e6;
-          /* font-family: "Lexend Mega", sans-serif;
-          font-optical-sizing: auto;
-          font-weight:400;
-          font-style: normal; */
       }
 
       .container {
@@ -119,11 +115,7 @@
           border: 1px solid #000;
           border-radius: 5px;
       }
-      .mortgage-type input:checked {
-          /* color: currentColor;
-          accent-color: #ffff00;
-          background-color: #000;  */
-      }
+    
 
       .calculate {
           padding: 10px 30px;
@@ -170,14 +162,17 @@
           margin: 10px;
           border-bottom: 2px solid #ffffff34;
       }
-      .monthly-text,
-      .total-text {
+      .monthly-message,
+      .total-message {
           color:  #ffffff34;
           font-size: 14px;
       }
       .monthly-amount {
           color:  #ffff00;
-          font-size: 2.5em;
+          font-size: 2em;
+      }
+      .overall-repayment {
+          margin-left: 20px;
       }
       .total-amount {
           font-size: 24px;
@@ -249,17 +244,17 @@
           <p class="result" id="result">Results shown here</p>
           <small class="info">Complete the form and click "calculate repayment" to see what your monthly repayment would be.</small>
 
-          <!-- <div class="payment-wrapper">
+          <div class="payment-wrapper" id="paymentWrapper">
               <div class="monthly-repayment">
-                  <p class="monthly-text"></p>
+                  <p class="monthly-message"></p>
                   <p class="monthly-amount"></p>
               </div>
 
               <div class="overall-repayment">
-                  <p class="total-text"></p>
+                  <p class="total-message"></p>
                   <p class="total-amount"></p>
               </div>
-          </div> -->
+          </div> 
         </section>
       </div>
     </main>
