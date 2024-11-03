@@ -33,8 +33,7 @@ function calculatePayment() {
     // Interest-only mortgage calculation
     `${resultText}`;
     `${info}`;
-    displayAmount();
-    const monthlyInterest = (amount * interestRate) / 12;
+    // const monthlyInterest = (amount * interestRate) / 12;
   }
 
   // Display the result
