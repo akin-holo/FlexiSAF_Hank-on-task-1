@@ -56,13 +56,22 @@
       }
 
       .mort-amount {
+          position: relative;
           display: flex;
           flex-direction: column;
           margin: 0 20px;
           gap: 5px;
       }
       .amount {
-          padding: 8px 0;
+          padding: 8px 40px;
+      }
+      .placeholder-amount {
+          position: absolute;
+          display: block;
+          top: 37.5%;
+          left: 0.5%;
+          padding: 9.5px;  
+          background-color: #add8e6;
       }
 
       .y-and-i-wrapper {
@@ -77,12 +86,20 @@
           padding: 8px 0;
           margin-top: 5px;
       }
-      .y-and-i-wrapper .pseudo-years {
+      .y-and-i-wrapper .placeholder-years {
           position: absolute;
-          top: 40%;
+          top: 40.9%;
           right: 7.7%;
-          padding: 10px;  
+          padding: 9.5px;  
           background-color: #add8e6;
+      }
+      .y-and-i-wrapper .placeholder-percent {
+          position: absolute;
+          top: 40.9%;
+          right: 7.7%;
+          padding: 9.5px;
+          background-color: #add8e6;
+
       }
 
 
@@ -161,9 +178,11 @@
             <button type="reset" class="clear-all" id="clearAll">Clear All</button>
           </div>
 
+                <!-- Mortage Amount -->
           <label for="amount" class="mort-amount">
             <span>Mortgage Amount</span> 
-            <input class="amount" id="amount" inputmode="numeric" placeholder="$">
+            <input class="amount" id="amount" inputmode="numeric">
+            <span class="placeholder-amount">&pound;</span>
           </label>
 
                 <!-- years and Interest -->
@@ -171,15 +190,15 @@
             <label>
               <span>Mortgage Term</span>
               <input type="number">
-              <span class="pseudo-years">Years</span>
+              <span class="placeholder-years">Years</span>
             </label>
 
                   <!-- Morgate Term -->
-            <div>
+            <label>
               <span>Mortgage Term</span>
-              <input type="number" placeholder="%">
-              <!-- <span class="pseudo-percent">&#37;</span> -->
-            </div>
+              <input type="number">
+              <span class="placeholder-percent">&#37;</span>
+            </label>
           </div>
 
                   <!-- Morgate Type -->
@@ -192,7 +211,7 @@
             
             <label for="interest">
               <input type="radio" name="mortgageType" id="interest" aria-colindex="">
-              Interest
+              Interest Only
             </label>
           </div>
 
